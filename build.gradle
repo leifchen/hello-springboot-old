@@ -35,11 +35,14 @@ dependencies {
     implementation('mysql:mysql-connector-java:5.1.47')
 
     // Common Util
-    implementation 'org.apache.commons:commons-lang3'
-    implementation 'commons-io:commons-io:2.6'
+    implementation ('org.apache.commons:commons-lang3')
+    implementation ('commons-io:commons-io:2.6')
 
     // Lombok
     compileOnly('org.projectlombok:lombok')
+
+    // Dev Tools
+    implementation('org.springframework.boot:spring-boot-devtools')
 
     // SpringBoot Test
     testImplementation('org.springframework.boot:spring-boot-starter-test')

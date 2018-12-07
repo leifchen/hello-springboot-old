@@ -20,6 +20,14 @@ spring:
     open-in-view: false
 
   jackson:
-    date-format: yyyy-MM-dd hh:mm:ss
+    date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
     default-property-inclusion: non_null
+
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+
+  thymeleaf:
+    cache: false
