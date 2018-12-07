@@ -44,6 +44,9 @@ dependencies {
     // Dev Tools
     implementation('org.springframework.boot:spring-boot-devtools')
 
+    // freemarker
+    implementation('org.springframework.boot:spring-boot-starter-freemarker')
+
     // SpringBoot Test
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
