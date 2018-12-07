@@ -1,4 +1,11 @@
 spring:
+  output:
+    ansi:
+      enabled: always
+
+  profiles:
+    active: dev
+
   datasource:
     url: jdbc:mysql://localhost/db_springboot?useSSL=false&useUnicode=true&characterEncoding=utf-8
     username: root
@@ -12,8 +19,7 @@ spring:
     show-sql: false
     open-in-view: false
 
-  profiles:
-    active: dev
-  output:
-    ansi:
-      enabled: always
+  jackson:
+    date-format: yyyy-MM-dd hh:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
