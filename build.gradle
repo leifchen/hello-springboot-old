@@ -47,6 +47,9 @@ dependencies {
     // freemarker
     implementation('org.springframework.boot:spring-boot-starter-freemarker')
 
+    // thymeleaf
+    implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+
     // SpringBoot Test
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

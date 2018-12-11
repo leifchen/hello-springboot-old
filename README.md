@@ -2,6 +2,27 @@
 
 整理常用 Spring Boot 相关的知识内容。
 
+## 热部署
+
+### 1. 添加依赖项
+
+```
+    implementation('org.springframework.boot:spring-boot-devtools')
+``` 
+
+### 2. 在配置文件 application.yml 配置以下属性：
+
+```
+spring
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+
+  thymeleaf:
+    cache: false
+```    
+
 ## 多环境配置
 
 - 配置开发环境：application-dev.yml
@@ -11,5 +32,6 @@
 
 ## 参考
 
-1. [Spring Boot 2.0深度实践-初遇Spring Boot](https://www.imooc.com/learn/933)
+1. [SpringBoot开发常用技术整合](https://www.imooc.com/learn/956)
 2. [Spring Boot进阶之Web进阶](https://www.imooc.com/learn/810)
+3. [Spring Boot 2.0深度实践-初遇Spring Boot](https://www.imooc.com/learn/933)
