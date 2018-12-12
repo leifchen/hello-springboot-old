@@ -20,7 +20,7 @@ import java.util.List;
  * @Date 2018-12-07
  */
 @Controller
-@RequestMapping("th")
+@RequestMapping("/th")
 public class ThymeleafController {
 
     @Resource

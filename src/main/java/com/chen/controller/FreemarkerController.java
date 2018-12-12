@@ -15,7 +15,7 @@ import javax.annotation.Resource;
  * @Date 2018-12-07
  */
 @Controller
-@RequestMapping("ftl")
+@RequestMapping("/ftl")
 public class FreemarkerController {
 
     @Resource
