@@ -1,7 +1,7 @@
 package com.chen.controller;
 
 import com.chen.config.ResourceSettings;
-import com.chen.model.SysUser;
+import com.chen.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,7 +40,7 @@ public class ThymeleafController {
 
     @GetMapping("/test")
     public String test(ModelMap map) {
-        SysUser u = SysUser.builder()
+        User u = User.builder()
                 .name("LeifChen")
                 .password("123456")
                 .age(18)
@@ -49,15 +49,15 @@ public class ThymeleafController {
                 .build();
         map.addAttribute("user", u);
 
-        SysUser u1 = SysUser.builder()
+        User u1 = User.builder()
                 .name("Chen")
                 .age(20)
                 .build();
-        SysUser u2 = SysUser.builder()
+        User u2 = User.builder()
                 .name("Leif")
                 .age(12)
                 .build();
-        List<SysUser> userList = new ArrayList<>();
+        List<User> userList = new ArrayList<>();
         userList.add(u);
         userList.add(u1);
         userList.add(u2);
@@ -67,7 +67,7 @@ public class ThymeleafController {
     }
 
     @PostMapping("postform")
-    public String postform(SysUser u) {
+    public String postform(User u) {
         System.out.println(u.getName());
         System.out.println(u.getAge());
         return "redirect:/th/test";

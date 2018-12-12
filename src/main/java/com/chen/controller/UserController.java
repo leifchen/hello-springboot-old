@@ -1,7 +1,7 @@
 package com.chen.controller;
 
 import com.chen.common.JsonResult;
-import com.chen.model.SysUser;
+import com.chen.model.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,11 +16,11 @@ import java.util.Date;
  */
 @RestController
 @RequestMapping("/admin")
-public class SysUserController {
+public class UserController {
 
     @GetMapping("/user")
     public JsonResult listAll() {
-        SysUser user = SysUser.builder()
+        User user = User.builder()
                 .name("LeifChen")
                 .password("123456")
                 .age(28)

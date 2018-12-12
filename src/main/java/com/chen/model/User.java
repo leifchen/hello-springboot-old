@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 /**
- * SysUser
- *
+ * 用户
+ * <p>
  * @Author LeifChen
  * @Date 2018-11-13
  */
@@ -18,7 +18,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class SysUser {
+public class User {
 
     private String name;
 
