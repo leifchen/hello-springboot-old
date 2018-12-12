@@ -8,7 +8,9 @@
 
 <h1 style="color: red">发生错误</h1>
 <div th:text="${url}"></div>
-<div th:text="${exception.message}"></div>
+<div th:if="${exception}">
+    <div th:text="${exception.message}"></div>
+</div>
 
 </body>
 </html>
