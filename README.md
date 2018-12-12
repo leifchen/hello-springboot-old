@@ -30,8 +30,13 @@ spring
 
 借由配置文件 application.yml 中的 spring.profiles.active=dev 来实现环境的选择。
 
+## 集成 MyBatis + 通用 Mapper
+
+详情请参考[abel533/MyBatis-Spring-Boot](https://github.com/abel533/MyBatis-Spring-Boot)的配置说明。
+
 ## 参考
 
 1. [SpringBoot开发常用技术整合](https://www.imooc.com/learn/956)
 2. [Spring Boot进阶之Web进阶](https://www.imooc.com/learn/810)
 3. [Spring Boot 2.0深度实践-初遇Spring Boot](https://www.imooc.com/learn/933)
+4. [MyBatis-Spring-Boot](https://github.com/abel533/MyBatis-Spring-Boot)

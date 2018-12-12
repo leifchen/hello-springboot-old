@@ -39,11 +39,12 @@ public interface SysUserService {
 
     /**
      * 分页查询用户列表
+     * @param user     参考用户
      * @param page     页码
      * @param pageSize 每页条数
      * @return
      */
-    List<SysUser> listByPage(int page, int pageSize);
+    List<SysUser> listByPage(SysUser user, int page, int pageSize);
 
     /**
      * 批量新增
@@ -56,4 +57,11 @@ public interface SysUserService {
      * @param user 用户
      */
     void saveError(SysUser user);
+
+    /**
+     * 根据id查询用户的简单信息
+     * @param id 主键
+     * @return
+     */
+    SysUser getUserSimpleInfoById(long id);
 }

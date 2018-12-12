@@ -3,10 +3,7 @@ package com.chen.controller;
 import com.chen.common.JsonResult;
 import com.chen.model.SysUser;
 import com.chen.service.SysUserService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
@@ -58,7 +55,9 @@ public class MybatisController {
     public JsonResult list(@RequestParam(name = "page", defaultValue = "0") int page,
                            @RequestParam(name = "pageSize", defaultValue = "5") int pageSize) {
 
-        List<SysUser> userList = userService.listByPage(page, pageSize);
+        SysUser user = new SysUser();
+        user.setName("Test");
+        List<SysUser> userList = userService.listByPage(user, page, pageSize);
         return JsonResult.ok(userList);
     }
 
@@ -71,5 +70,15 @@ public class MybatisController {
 
         userService.saveError(user);
         return JsonResult.ok(user, "事务回滚");
+    }
+
+    @GetMapping("/{id}")
+    public JsonResult getSimpleInfo(@PathVariable("id") long id) {
+        SysUser user = userService.getUserSimpleInfoById(id);
+        if (user != null) {
+            return JsonResult.ok(user);
+        } else {
+            return JsonResult.error("该用户不存在");
+        }
     }
 }
