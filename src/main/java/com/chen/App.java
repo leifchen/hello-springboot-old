@@ -3,6 +3,7 @@ package com.chen;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -16,6 +17,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @ServletComponentScan(basePackages = "com.chen.web.servlet")
 @MapperScan(basePackages = "com.chen.mapper")
 @EnableScheduling
+@EnableAsync
 public class App {
 
     public static void main(String[] args) {
