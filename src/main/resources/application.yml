@@ -60,6 +60,12 @@ spring:
     basename: i18n/messages
     encoding: UTF-8
 
+  mail:
+    default-encoding: UTF-8
+    host: smtp.aliyun.com
+    username: user@aliyun.com
+    password: password
+
 #  freemarker:
 #    template-loader-path: classpath:/templates/
 #    cache: false
